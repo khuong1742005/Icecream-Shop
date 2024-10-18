@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:ice_cream_shop/model/arrow_back.dart';
 import 'package:ice_cream_shop/model/textField.dart';
 import 'package:ice_cream_shop/model/welcome_page_button.dart';
-import 'package:ice_cream_shop/started_page/confirm_pass_page.dart';
+import 'package:ice_cream_shop/started_page/new_pass_page.dart';
 
-class ForgotPassPage extends StatelessWidget {
-  const ForgotPassPage({super.key});
+class ConfirmPassPage extends StatelessWidget {
+  const ConfirmPassPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +18,7 @@ class ForgotPassPage extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const Text(
-                  'Tìm tài khoản',
+                  'Xác nhận',
                   style: TextStyle(
                     color: Colors.black,
                     fontSize: 32,
@@ -33,14 +33,14 @@ class ForgotPassPage extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 4),
-                buildTextField(hinttext: "Email", isPass: false),
+                buildTextField(hinttext: "Nhập mã", isPass: false),
                 const SizedBox(height: 30),
                 buildButton(
                   onPressed: () {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const ConfirmPassPage()));
+                            builder: (context) => const NewPassPage()));
                   },
                   backgroudColor: const Color(0xffff4f80),
                   height: 360,
@@ -59,11 +59,11 @@ class ForgotPassPage extends StatelessWidget {
                       },
                       color: const Color(0xffFF4F80),
                     ),
-                    const SizedBox(width: 75),
+                    const SizedBox(width: 120),
                     GestureDetector(
                       onTap: () {},
                       child: const Text(
-                        'Tìm kiếm bằng số di động',
+                        'Gửi lại mã',
                         style: TextStyle(
                           fontSize: 14,
                           fontWeight: FontWeight.w500,

@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:ice_cream_shop/home_page/main_home_page.dart';
+import 'package:ice_cream_shop/model/arrow_back.dart';
+import 'package:ice_cream_shop/model/textField.dart';
+import 'package:ice_cream_shop/model/welcome_page_button.dart';
 import 'package:ice_cream_shop/started_page/forgot_pass_page.dart';
 import 'package:ice_cream_shop/started_page/sign_up_page.dart';
 
-// ignore: camel_case_types
-class signInPage extends StatelessWidget {
-  const signInPage({super.key});
+class SignInPage extends StatelessWidget {
+  const SignInPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -64,30 +67,29 @@ class signInPage extends StatelessWidget {
                     ),
                   ),
                 ),
-                ElevatedButton(
-                  onPressed: () {},
-                  style: ElevatedButton.styleFrom(
-                      backgroundColor: const Color(0xffff4f80),
-                      minimumSize: const Size(360, 55),
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10))),
-                  child: const Text(
-                    'Đăng nhập',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 20,
-                      fontWeight: FontWeight.w700,
-                    ),
-                  ),
+                buildButton(
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const HomePage()));
+                  },
+                  backgroudColor: const Color(0xffff4f80),
+                  height: 360,
+                  width: 55,
+                  text: "Đăng nhập",
+                  textColor: Colors.white,
+                  fontSize: 20,
+                  fontWeight: FontWeight.w700,
                 ),
                 const SizedBox(height: 16),
                 Row(
                   children: [
-                    GestureDetector(
+                    buildArrow(
                       onTap: () {
                         Navigator.pop(context);
                       },
-                      child: const Icon(Icons.back_hand),
+                      color: const Color(0xffFF4F80),
                     ),
                     const SizedBox(width: 107),
                     GestureDetector(
@@ -123,35 +125,6 @@ class signInPage extends StatelessWidget {
         borderRadius: BorderRadius.circular(10),
         color: testColor,
       ),
-    );
-  }
-
-  Widget buildTextField({hinttext, isPass}) {
-    return TextField(
-      decoration: InputDecoration(
-        hintText: hinttext,
-        border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(10),
-        ),
-        enabledBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(10),
-          borderSide: const BorderSide(
-            color: Colors.white,
-            width: 1,
-          ),
-        ),
-        focusedBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(10),
-          borderSide: const BorderSide(
-            color: Color(0xffFF0047),
-            width: 2,
-          ),
-        ),
-        fillColor: const Color(0xffF1F4FF),
-        filled: true,
-        contentPadding: const EdgeInsets.only(top: 40, left: 20),
-      ),
-      obscureText: isPass,
     );
   }
 }
