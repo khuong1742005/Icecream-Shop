@@ -42,7 +42,7 @@ class ConfirmPassPage extends StatelessWidget {
                         MaterialPageRoute(
                             builder: (context) => const NewPassPage()));
                   },
-                  backgroudColor: const Color(0xffff4f80),
+                  backgroudColor: Theme.of(context).colorScheme.primary,
                   height: 360,
                   width: 55,
                   text: "Tiếp tục",
@@ -57,7 +57,7 @@ class ConfirmPassPage extends StatelessWidget {
                       onTap: () {
                         Navigator.pop(context);
                       },
-                      color: const Color(0xffFF4F80),
+                      color: Theme.of(context).colorScheme.primary,
                     ),
                     const SizedBox(width: 120),
                     GestureDetector(

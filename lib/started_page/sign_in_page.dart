@@ -24,9 +24,13 @@ class SignInPage extends StatelessWidget {
                   'Đăng nhập',
                   style: TextStyle(
                     color: Colors.black,
-                    fontSize: 32,
                     fontWeight: FontWeight.bold,
+                    fontSize: 32,
                   ),
+                  // style: Theme.of(context)
+                  //     .textTheme
+                  //     .headlineMedium
+                  //     ?.copyWith(color: Theme.of(context).colorScheme.primary),
                 ),
                 const SizedBox(height: 42),
                 Padding(
@@ -56,10 +60,10 @@ class SignInPage extends StatelessWidget {
                             MaterialPageRoute(
                                 builder: (context) => const ForgotPassPage()));
                       },
-                      child: const Text(
+                      child: Text(
                         'Bạn quên mật khẩu ?',
                         style: TextStyle(
-                          color: Color(0xffff4f80),
+                          color: Theme.of(context).colorScheme.primary,
                           fontSize: 14,
                           fontWeight: FontWeight.w600,
                         ),
@@ -74,7 +78,7 @@ class SignInPage extends StatelessWidget {
                         MaterialPageRoute(
                             builder: (context) => const HomePage()));
                   },
-                  backgroudColor: const Color(0xffff4f80),
+                  backgroudColor: Theme.of(context).colorScheme.primary,
                   height: 360,
                   width: 55,
                   text: "Đăng nhập",
@@ -89,7 +93,7 @@ class SignInPage extends StatelessWidget {
                       onTap: () {
                         Navigator.pop(context);
                       },
-                      color: const Color(0xffFF4F80),
+                      color: Theme.of(context).colorScheme.primary,
                     ),
                     const SizedBox(width: 107),
                     GestureDetector(

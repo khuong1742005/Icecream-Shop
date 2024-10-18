@@ -44,10 +44,10 @@ class NewPassPage extends StatelessWidget {
                         MaterialPageRoute(
                             builder: (context) => const SignInPage()));
                   },
-                  backgroudColor: const Color(0xffff4f80),
+                  backgroudColor: Theme.of(context).colorScheme.primary,
                   height: 360,
                   width: 55,
-                  text: "Đăng nhập",
+                  text: "Quay lại đăng nhập",
                   textColor: Colors.white,
                   fontSize: 20,
                   fontWeight: FontWeight.w700,
@@ -57,7 +57,7 @@ class NewPassPage extends StatelessWidget {
                   onTap: () {
                     Navigator.pop(context);
                   },
-                  color: const Color(0xffFF4F80),
+                  color: Theme.of(context).colorScheme.primary,
                 ),
               ],
             ),

@@ -23,19 +23,19 @@ class WelcomePage extends StatelessWidget {
                     height: 310,
                   ),
                 ),
-                const Text(
+                Text(
                   'Giao hàng tận tay',
                   style: TextStyle(
                     fontSize: 32,
-                    color: Color(0xffFF4F80),
+                    color: Theme.of(context).colorScheme.primary,
                     fontWeight: FontWeight.w600,
                   ),
                 ),
-                const Text(
+                Text(
                   'Kem ăn liền tay',
                   style: TextStyle(
                     fontSize: 32,
-                    color: Color(0xffFF4F80),
+                    color: Theme.of(context).colorScheme.primary,
                     fontWeight: FontWeight.w600,
                   ),
                 ),
@@ -58,7 +58,7 @@ class WelcomePage extends StatelessWidget {
                             MaterialPageRoute(
                                 builder: (context) => const SignInPage()));
                       },
-                      backgroudColor: const Color(0xffFF4F80),
+                      backgroudColor: Theme.of(context).colorScheme.primary,
                       height: 128,
                       width: 44,
                       text: "Đăng nhập",
@@ -73,7 +73,7 @@ class WelcomePage extends StatelessWidget {
                             MaterialPageRoute(
                                 builder: (context) => const SignUpPage()));
                       },
-                      backgroudColor: const Color(0xffF5A7BC),
+                      backgroudColor: Theme.of(context).colorScheme.secondary,
                       height: 128,
                       width: 44,
                       text: "Đăng ký",
