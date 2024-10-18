@@ -1,17 +1,20 @@
 # ice_cream_shop
 
-A new Flutter project.
+This is a my pet project. I started this project in 14/10/2024. This project is about a ice-cream shop basic.
 
-## Getting Started
+## Preview
 
-This project is a starting point for a Flutter application.
+This project have a few pages such as: welcome page, register and login page, forgot pass page, home page,...
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
 # Icecream-Shop
+
+## Welcome Page, Login & Register Page, ForgotPass Page
+![image](https://github.com/user-attachments/assets/22223595-00cd-4970-bff5-57bd6a199cec)
+![image](https://github.com/user-attachments/assets/27f78239-25e2-4dd3-b951-14fb5a61a60e)
+![image](https://github.com/user-attachments/assets/d8589fd7-6b92-43ab-a5d8-74db3d812364)
+![image](https://github.com/user-attachments/assets/e85f17f6-e19c-4f33-886e-0780e506967e)
+
+
+
+
+
