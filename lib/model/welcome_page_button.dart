@@ -14,7 +14,7 @@ Widget buildButton({
     onPressed: onPressed,
     style: ElevatedButton.styleFrom(
         backgroundColor: backgroudColor,
-        minimumSize: Size(height, width),
+        minimumSize: Size(width, height),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10))),
     child: Text(
       text,

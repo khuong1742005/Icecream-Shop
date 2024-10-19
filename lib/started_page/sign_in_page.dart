@@ -20,17 +20,12 @@ class SignInPage extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Text(
+                Text(
                   'Đăng nhập',
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 32,
-                  ),
-                  // style: Theme.of(context)
-                  //     .textTheme
-                  //     .headlineMedium
-                  //     ?.copyWith(color: Theme.of(context).colorScheme.primary),
+                  style: Theme.of(context)
+                      .textTheme
+                      .headlineMedium
+                      ?.copyWith(color: Colors.black),
                 ),
                 const SizedBox(height: 42),
                 Padding(
@@ -38,9 +33,9 @@ class SignInPage extends StatelessWidget {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      buildSignIn(testColor: Colors.black),
-                      buildSignIn(testColor: Colors.red),
-                      buildSignIn(testColor: Colors.orange),
+                      buildSignIn(icon: const Icon(Icons.g_mobiledata)),
+                      buildSignIn(icon: const Icon(Icons.facebook)),
+                      buildSignIn(icon: const Icon(Icons.apple)),
                     ],
                   ),
                 ),
@@ -62,11 +57,8 @@ class SignInPage extends StatelessWidget {
                       },
                       child: Text(
                         'Bạn quên mật khẩu ?',
-                        style: TextStyle(
-                          color: Theme.of(context).colorScheme.primary,
-                          fontSize: 14,
-                          fontWeight: FontWeight.w600,
-                        ),
+                        style: Theme.of(context).textTheme.labelLarge?.copyWith(
+                            color: Theme.of(context).colorScheme.primary),
                       ),
                     ),
                   ),
@@ -76,11 +68,11 @@ class SignInPage extends StatelessWidget {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const HomePage()));
+                            builder: (context) => const MainHomePage()));
                   },
                   backgroudColor: Theme.of(context).colorScheme.primary,
-                  height: 360,
-                  width: 55,
+                  height: 55,
+                  width: 360,
                   text: "Đăng nhập",
                   textColor: Colors.white,
                   fontSize: 20,
@@ -103,12 +95,9 @@ class SignInPage extends StatelessWidget {
                             MaterialPageRoute(
                                 builder: (context) => const SignUpPage()));
                       },
-                      child: const Text(
+                      child: Text(
                         'Tạo tài khoản',
-                        style: TextStyle(
-                          fontSize: 14,
-                          fontWeight: FontWeight.w500,
-                        ),
+                        style: Theme.of(context).textTheme.labelLarge,
                       ),
                     ),
                   ],
@@ -121,13 +110,20 @@ class SignInPage extends StatelessWidget {
     );
   }
 
-  Widget buildSignIn({testColor}) {
-    return Container(
-      width: 55,
-      height: 44,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(10),
-        color: testColor,
+  Widget buildSignIn({
+    Icon icon = const Icon(Icons.search),
+    Function()? ontap,
+  }) {
+    return GestureDetector(
+      onTap: ontap,
+      child: Container(
+        width: 55,
+        height: 44,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(10),
+          color: const Color(0xffECECEC),
+        ),
+        child: icon,
       ),
     );
   }

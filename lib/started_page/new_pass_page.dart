@@ -17,20 +17,13 @@ class NewPassPage extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Text(
+                Text(
                   'Xác nhận',
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 32,
-                    fontWeight: FontWeight.bold,
-                  ),
+                  style: Theme.of(context).textTheme.headlineMedium,
                 ),
-                const Text(
+                Text(
                   "Chúng tôi có thể gửi mã cho bạn thông qua email",
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 14,
-                  ),
+                  style: Theme.of(context).textTheme.labelLarge,
                 ),
                 const SizedBox(height: 4),
                 buildTextField(hinttext: "Nhập mật khẩu mới", isPass: true),
@@ -45,8 +38,8 @@ class NewPassPage extends StatelessWidget {
                             builder: (context) => const SignInPage()));
                   },
                   backgroudColor: Theme.of(context).colorScheme.primary,
-                  height: 360,
-                  width: 55,
+                  height: 55,
+                  width: 360,
                   text: "Quay lại đăng nhập",
                   textColor: Colors.white,
                   fontSize: 20,

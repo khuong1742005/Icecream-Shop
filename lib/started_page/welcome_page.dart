@@ -59,8 +59,8 @@ class WelcomePage extends StatelessWidget {
                                 builder: (context) => const SignInPage()));
                       },
                       backgroudColor: Theme.of(context).colorScheme.primary,
-                      height: 128,
-                      width: 44,
+                      height: 44,
+                      width: 128,
                       text: "Đăng nhập",
                       textColor: Colors.white,
                       fontSize: 14,
@@ -74,8 +74,8 @@ class WelcomePage extends StatelessWidget {
                                 builder: (context) => const SignUpPage()));
                       },
                       backgroudColor: Theme.of(context).colorScheme.secondary,
-                      height: 128,
-                      width: 44,
+                      height: 44,
+                      width: 128,
                       text: "Đăng ký",
                       textColor: Colors.black,
                       fontSize: 14,

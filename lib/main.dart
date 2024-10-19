@@ -14,14 +14,29 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         useMaterial3: true,
         colorScheme: ColorScheme.fromSeed(
-            seedColor: const Color(0xffFF4F80),
-            primary: const Color(0xffFF4F80),
-            secondary: const Color(0xfff5a7bc),
-            tertiary: const Color(0xffF884A5)),
+          seedColor: const Color(0xffFF4F80),
+          primary: const Color(0xffFF4F80),
+          primaryContainer: const Color(0xffF1F1F1),
+          secondary: const Color(0xfff5a7bc),
+          secondaryContainer: const Color(0xff6C3D20),
+          tertiary: const Color(0xffF884A5),
+        ),
         textTheme: const TextTheme(
-            headlineMedium: TextStyle(
-          fontSize: 32,
-        )),
+          // Heading : đậm to
+          headlineMedium: TextStyle(
+            fontSize: 32,
+            fontWeight: FontWeight.bold,
+          ),
+          titleLarge: TextStyle(
+            fontSize: 16,
+            fontWeight: FontWeight.w900,
+          ),
+          // label 1 : nhỏ và hơi đậm
+          labelLarge: TextStyle(
+            fontSize: 14,
+            fontWeight: FontWeight.w600,
+          ),
+        ),
       ),
       debugShowCheckedModeBanner: false,
       home: const WelcomePage(),

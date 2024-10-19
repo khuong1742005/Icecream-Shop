@@ -17,13 +17,9 @@ class SignUpPage extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Text(
+                Text(
                   'Tạo tài khoản',
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 32,
-                    fontWeight: FontWeight.bold,
-                  ),
+                  style: Theme.of(context).textTheme.headlineMedium,
                 ),
                 const SizedBox(height: 32),
                 buildArrow(
@@ -46,11 +42,11 @@ class SignUpPage extends StatelessWidget {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const HomePage()));
+                            builder: (context) => const MainHomePage()));
                   },
                   backgroudColor: Theme.of(context).colorScheme.primary,
-                  height: 360,
-                  width: 55,
+                  height: 55,
+                  width: 360,
                   text: "Đăng ký",
                   textColor: Colors.white,
                   fontSize: 20,

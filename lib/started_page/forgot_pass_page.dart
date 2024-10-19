@@ -17,20 +17,13 @@ class ForgotPassPage extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Text(
+                Text(
                   'Tìm tài khoản',
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 32,
-                    fontWeight: FontWeight.bold,
-                  ),
+                  style: Theme.of(context).textTheme.headlineMedium,
                 ),
-                const Text(
+                Text(
                   "Chúng tôi có thể gửi mã cho bạn thông qua email",
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 14,
-                  ),
+                  style: Theme.of(context).textTheme.labelLarge,
                 ),
                 const SizedBox(height: 4),
                 buildTextField(hinttext: "Email", isPass: false),
@@ -43,8 +36,8 @@ class ForgotPassPage extends StatelessWidget {
                             builder: (context) => const ConfirmPassPage()));
                   },
                   backgroudColor: Theme.of(context).colorScheme.primary,
-                  height: 360,
-                  width: 55,
+                  height: 55,
+                  width: 360,
                   text: "Tiếp tục",
                   textColor: Colors.white,
                   fontSize: 20,
@@ -62,12 +55,9 @@ class ForgotPassPage extends StatelessWidget {
                     const SizedBox(width: 75),
                     GestureDetector(
                       onTap: () {},
-                      child: const Text(
+                      child: Text(
                         'Tìm kiếm bằng số di động',
-                        style: TextStyle(
-                          fontSize: 14,
-                          fontWeight: FontWeight.w500,
-                        ),
+                        style: Theme.of(context).textTheme.labelLarge,
                       ),
                     ),
                   ],
