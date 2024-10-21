@@ -1,16 +1,34 @@
 import 'package:flutter/material.dart';
 import 'package:ice_cream_shop/model/welcome_page_button.dart';
 
-Widget BuildFoodPageview(
-  BuildContext context, {
-  Color backgroudColor = Colors.white,
-}) {
-  return Padding(
-    padding: const EdgeInsets.symmetric(horizontal: 16),
-    child: Container(
+class BuildFoodPageview extends StatelessWidget {
+  final Color backgroundColor;
+  final String foodName;
+  final String foodDescription;
+  final String newPrice;
+  final String oldPrice;
+  final String sales;
+  final String foodImage;
+  final String foodImageExtra;
+
+  const BuildFoodPageview({
+    super.key,
+    required this.backgroundColor,
+    required this.foodName,
+    required this.foodDescription,
+    required this.newPrice,
+    required this.oldPrice,
+    required this.sales,
+    required this.foodImage,
+    required this.foodImageExtra,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10),
-        color: backgroudColor,
+        color: backgroundColor,
       ),
       child: Stack(
         children: [
@@ -21,21 +39,21 @@ Widget BuildFoodPageview(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  "Kem cốc siêu to khổng lồ",
+                  foodName,
                   style: Theme.of(context)
                       .textTheme
                       .titleLarge
                       ?.copyWith(color: Colors.white),
                 ),
-                const Text(
-                  "Không ngon không lấy tiền",
-                  style: TextStyle(fontSize: 10, color: Colors.white),
+                Text(
+                  foodDescription,
+                  style: const TextStyle(fontSize: 10, color: Colors.white),
                 ),
                 const SizedBox(height: 10),
                 Row(
                   children: [
                     Text(
-                      "9.000 VND",
+                      newPrice,
                       style: Theme.of(context)
                           .textTheme
                           .labelLarge
@@ -43,7 +61,7 @@ Widget BuildFoodPageview(
                     ),
                     const SizedBox(width: 7),
                     Text(
-                      "10.000 VND",
+                      oldPrice,
                       style: TextStyle(
                         fontSize: 14,
                         fontWeight: FontWeight.w600,
@@ -68,14 +86,14 @@ Widget BuildFoodPageview(
           Align(
             alignment: Alignment.centerLeft,
             child: Image.asset(
-              'assets/ice_cream_heading.jpg',
+              foodImage,
               scale: 10,
             ),
           ),
           Align(
             alignment: Alignment.bottomRight,
             child: Image.asset(
-              'assets/socola_heading.png',
+              foodImageExtra,
               scale: 1,
             ),
           ),
@@ -85,14 +103,14 @@ Widget BuildFoodPageview(
               alignment: Alignment.topRight,
               child: Container(
                 height: 20,
-                width: 68,
+                width: 80,
                 decoration: BoxDecoration(
                   color: Theme.of(context).colorScheme.primary,
                 ),
                 child: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 3),
                   child: Text(
-                    "10% sale",
+                    sales,
                     style: Theme.of(context)
                         .textTheme
                         .labelLarge
@@ -104,6 +122,6 @@ Widget BuildFoodPageview(
           )
         ],
       ),
-    ),
-  );
+    );
+  }
 }
