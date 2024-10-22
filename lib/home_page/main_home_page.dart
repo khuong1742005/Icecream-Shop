@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:ice_cream_shop/home_page/favourite_page.dart';
 import 'package:ice_cream_shop/home_page/home_page.dart';
 import 'package:ice_cream_shop/started_page/forgot_pass_page.dart';
-import 'package:ice_cream_shop/started_page/sign_in_page.dart';
 import 'package:ice_cream_shop/started_page/sign_up_page.dart';
 
 class MainHomePage extends StatefulWidget {
@@ -13,6 +13,7 @@ class MainHomePage extends StatefulWidget {
 
 class _MainHomePageState extends State<MainHomePage> {
   int _currentIndex = 0;
+  bool _isBell = false;
 
   @override
   Widget build(BuildContext context) {
@@ -20,9 +21,13 @@ class _MainHomePageState extends State<MainHomePage> {
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.primaryContainer,
         actions: [
-          const Icon(
-            Icons.notifications,
-            color: Colors.yellow,
+          GestureDetector(
+            onTap: () {
+              setState(() {
+                _isBell = !_isBell;
+              });
+            },
+            child: iconBell(),
           ),
           const SizedBox(width: 5),
           Container(
@@ -79,9 +84,15 @@ class _MainHomePageState extends State<MainHomePage> {
   List<Widget> listScreen() {
     return [
       const HomePage(),
-      const SignInPage(),
+      const FavouritePage(),
       const SignUpPage(),
       const ForgotPassPage(),
     ];
+  }
+
+  Widget iconBell() {
+    return (_isBell)
+        ? const Icon(Icons.notifications_active, color: Colors.yellow)
+        : const Icon(Icons.notifications_none);
   }
 }

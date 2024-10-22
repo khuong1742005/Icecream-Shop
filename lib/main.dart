@@ -22,21 +22,24 @@ class MyApp extends StatelessWidget {
           tertiary: const Color(0xffF884A5),
         ),
         textTheme: const TextTheme(
-          // Heading : đậm to
-          headlineMedium: TextStyle(
-            fontSize: 32,
-            fontWeight: FontWeight.bold,
-          ),
-          titleLarge: TextStyle(
-            fontSize: 16,
-            fontWeight: FontWeight.w900,
-          ),
-          // label 1 : nhỏ và hơi đậm
-          labelLarge: TextStyle(
-            fontSize: 14,
-            fontWeight: FontWeight.w600,
-          ),
-        ),
+            // Heading : đậm to
+            headlineMedium: TextStyle(
+              fontSize: 32,
+              fontWeight: FontWeight.bold,
+            ),
+            titleLarge: TextStyle(
+              fontSize: 16,
+              fontWeight: FontWeight.w900,
+            ),
+            // label 1 : nhỏ và hơi đậm
+            labelLarge: TextStyle(
+              fontSize: 14,
+              fontWeight: FontWeight.w600,
+            ),
+            labelSmall: TextStyle(
+              fontSize: 12,
+              fontWeight: FontWeight.bold,
+            )),
       ),
       debugShowCheckedModeBanner: false,
       home: const WelcomePage(),

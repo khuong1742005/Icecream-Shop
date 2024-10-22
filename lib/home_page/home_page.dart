@@ -93,6 +93,10 @@ class _HomePageState extends State<HomePage> {
                   return buildFoodGrid(
                     context,
                     foodImg: "assets/food_grid.png",
+                    foodName: "Kem quý's tộc",
+                    foodDescription:
+                        "Kem trộn cùng bánh mì, rắc vừng và thêm trái chuối",
+                    foodPrice: "15.000 VND",
                   );
                 },
               ),
