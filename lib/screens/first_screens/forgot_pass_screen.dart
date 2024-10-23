@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:ice_cream_shop/model/arrow_back.dart';
-import 'package:ice_cream_shop/model/textField.dart';
-import 'package:ice_cream_shop/model/welcome_page_button.dart';
-import 'package:ice_cream_shop/started_page/confirm_pass_page.dart';
+import 'package:ice_cream_shop/components/arrow_back.dart';
+import 'package:ice_cream_shop/screens/first_screens/confirm_pass_scrren.dart';
+import 'package:ice_cream_shop/widgets/main_button.dart';
+import 'package:ice_cream_shop/widgets/text_field.dart';
 
 class ForgotPassPage extends StatelessWidget {
   const ForgotPassPage({super.key});
@@ -10,6 +10,7 @@ class ForgotPassPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: ListView(
         children: [
           Padding(
@@ -28,7 +29,7 @@ class ForgotPassPage extends StatelessWidget {
                 const SizedBox(height: 4),
                 buildTextField(hinttext: "Email", isPass: false),
                 const SizedBox(height: 30),
-                buildButton(
+                buildMainButton(
                   onPressed: () {
                     Navigator.push(
                         context,

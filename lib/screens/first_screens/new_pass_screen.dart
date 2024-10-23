@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:ice_cream_shop/model/arrow_back.dart';
-import 'package:ice_cream_shop/model/textField.dart';
-import 'package:ice_cream_shop/model/welcome_page_button.dart';
-import 'package:ice_cream_shop/started_page/sign_in_page.dart';
+import 'package:ice_cream_shop/components/arrow_back.dart';
+import 'package:ice_cream_shop/screens/first_screens/sign_in_screen.dart';
+import 'package:ice_cream_shop/widgets/main_button.dart';
+import 'package:ice_cream_shop/widgets/text_field.dart';
 
 class NewPassPage extends StatelessWidget {
   const NewPassPage({super.key});
@@ -10,6 +10,7 @@ class NewPassPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: ListView(
         children: [
           Padding(
@@ -30,7 +31,7 @@ class NewPassPage extends StatelessWidget {
                 const SizedBox(height: 14),
                 buildTextField(hinttext: "Nhập lại mật khẩu mới", isPass: true),
                 const SizedBox(height: 30),
-                buildButton(
+                buildMainButton(
                   onPressed: () {
                     Navigator.push(
                         context,

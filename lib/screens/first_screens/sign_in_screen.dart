@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:ice_cream_shop/home_page/main_home_page.dart';
-import 'package:ice_cream_shop/model/arrow_back.dart';
-import 'package:ice_cream_shop/model/textField.dart';
-import 'package:ice_cream_shop/model/welcome_page_button.dart';
-import 'package:ice_cream_shop/started_page/forgot_pass_page.dart';
-import 'package:ice_cream_shop/started_page/sign_up_page.dart';
+import 'package:ice_cream_shop/components/arrow_back.dart';
+import 'package:ice_cream_shop/pages/home_page.dart';
+import 'package:ice_cream_shop/screens/first_screens/forgot_pass_screen.dart';
+import 'package:ice_cream_shop/screens/first_screens/sign_up_screen.dart';
+import 'package:ice_cream_shop/widgets/main_button.dart';
+import 'package:ice_cream_shop/widgets/text_field.dart';
 
 class SignInPage extends StatelessWidget {
   const SignInPage({super.key});
@@ -63,7 +63,7 @@ class SignInPage extends StatelessWidget {
                     ),
                   ),
                 ),
-                buildButton(
+                buildMainButton(
                   onPressed: () {
                     Navigator.push(
                         context,

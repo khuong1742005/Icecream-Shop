@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ice_cream_shop/model/welcome_page_button.dart';
+import 'package:ice_cream_shop/widgets/main_button.dart';
 
 class BuildFoodPageview extends StatelessWidget {
   final Color backgroundColor;
@@ -71,7 +71,7 @@ class BuildFoodPageview extends StatelessWidget {
                     ),
                   ],
                 ),
-                buildButton(
+                buildMainButton(
                   onPressed: () {},
                   backgroudColor: Colors.yellow,
                   textColor: Colors.black,

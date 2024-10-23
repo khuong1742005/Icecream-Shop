@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:ice_cream_shop/model/build_categories.dart';
-import 'package:ice_cream_shop/model/build_food_grid.dart';
-import 'package:ice_cream_shop/model/build_food_pageview.dart';
-import 'package:ice_cream_shop/model/search_box.dart';
+import 'package:ice_cream_shop/widgets/categories.dart';
+import 'package:ice_cream_shop/widgets/food_grid.dart';
+import 'package:ice_cream_shop/widgets/food_pageview.dart';
+import 'package:ice_cream_shop/widgets/search_box.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});

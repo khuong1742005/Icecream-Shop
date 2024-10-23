@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-Widget buildButton({
+Widget buildMainButton({
   Function()? onPressed,
   Color backgroudColor = Colors.white,
   double height = 0,

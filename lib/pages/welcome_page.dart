@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:ice_cream_shop/started_page/sign_in_page.dart';
-import 'package:ice_cream_shop/started_page/sign_up_page.dart';
-import 'package:ice_cream_shop/model/welcome_page_button.dart';
+import 'package:ice_cream_shop/screens/first_screens/sign_in_screen.dart';
+import 'package:ice_cream_shop/screens/first_screens/sign_up_screen.dart';
+import 'package:ice_cream_shop/widgets/main_button.dart';
 
 class WelcomePage extends StatelessWidget {
   const WelcomePage({super.key});
@@ -25,33 +25,28 @@ class WelcomePage extends StatelessWidget {
                 ),
                 Text(
                   'Giao hàng tận tay',
-                  style: TextStyle(
-                    fontSize: 32,
-                    color: Theme.of(context).colorScheme.primary,
-                    fontWeight: FontWeight.w600,
-                  ),
+                  style: Theme.of(context)
+                      .textTheme
+                      .headlineMedium
+                      ?.copyWith(color: Theme.of(context).colorScheme.primary),
                 ),
                 Text(
                   'Kem ăn liền tay',
-                  style: TextStyle(
-                    fontSize: 32,
-                    color: Theme.of(context).colorScheme.primary,
-                    fontWeight: FontWeight.w600,
-                  ),
+                  style: Theme.of(context)
+                      .textTheme
+                      .headlineMedium
+                      ?.copyWith(color: Theme.of(context).colorScheme.primary),
                 ),
                 const SizedBox(height: 49),
-                const Text(
+                Text(
                   'Luôn bên bạn mọi lúc mọi nơi',
-                  style: TextStyle(
-                    fontSize: 14,
-                    fontWeight: FontWeight.w500,
-                  ),
+                  style: Theme.of(context).textTheme.labelLarge,
                 ),
                 const SizedBox(height: 81),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    buildButton(
+                    buildMainButton(
                       onPressed: () {
                         Navigator.push(
                             context,
@@ -66,7 +61,7 @@ class WelcomePage extends StatelessWidget {
                       fontSize: 14,
                       fontWeight: FontWeight.w500,
                     ),
-                    buildButton(
+                    buildMainButton(
                       onPressed: () {
                         Navigator.push(
                             context,

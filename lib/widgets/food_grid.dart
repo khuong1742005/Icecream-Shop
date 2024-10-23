@@ -21,10 +21,12 @@ Widget buildFoodGrid(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Image.asset(
-              foodImg,
-              width: 114,
-              height: 95,
+            Center(
+              child: Image.asset(
+                foodImg,
+                width: 114,
+                height: 95,
+              ),
             ),
             Text(
               foodName,

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:ice_cream_shop/home_page/favourite_page.dart';
-import 'package:ice_cream_shop/home_page/home_page.dart';
-import 'package:ice_cream_shop/started_page/forgot_pass_page.dart';
-import 'package:ice_cream_shop/started_page/sign_up_page.dart';
+import 'package:ice_cream_shop/screens/first_screens/forgot_pass_screen.dart';
+import 'package:ice_cream_shop/screens/first_screens/sign_up_screen.dart';
+import 'package:ice_cream_shop/screens/second_screens/favourite_screen.dart';
+import 'package:ice_cream_shop/screens/second_screens/home_screen.dart';
 
 class MainHomePage extends StatefulWidget {
   const MainHomePage({super.key});

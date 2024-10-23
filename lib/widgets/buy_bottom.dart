@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ice_cream_shop/widgets/main_button.dart';
 
 Widget buidBuyButton(
   BuildContext context,
@@ -34,23 +35,16 @@ Widget buidBuyButton(
               ),
             ],
           ),
-          Container(
+          buildMainButton(
+            onPressed: () {},
+            backgroudColor: Colors.white,
             height: 50,
             width: 130,
-            decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(10),
-            ),
-            child: const Center(
-              child: Text(
-                "Mua hàng",
-                style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-            ),
-          )
+            text: "Mua hàng",
+            textColor: Colors.black,
+            fontSize: 20,
+            fontWeight: FontWeight.bold,
+          ),
         ],
       ),
     ),
