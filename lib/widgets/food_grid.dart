@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ice_cream_shop/widgets/main_button.dart';
 
 Widget buildFoodGrid(
   BuildContext context, {
@@ -55,22 +56,14 @@ Widget buildFoodGrid(
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  Container(
-                    height: 21,
+                  buildMainButton(
+                    onPressed: () {},
+                    backgroudColor: Theme.of(context).colorScheme.tertiary,
+                    height: 25,
                     width: 38,
-                    decoration: BoxDecoration(
-                      color: Theme.of(context).colorScheme.tertiary,
-                      borderRadius: BorderRadius.circular(5),
-                    ),
-                    child: const Center(
-                      child: Text(
-                        "Mua",
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 10,
-                        ),
-                      ),
-                    ),
+                    text: "Mua",
+                    textColor: Colors.white,
+                    fontSize: 10,
                   ),
                 ],
               ),

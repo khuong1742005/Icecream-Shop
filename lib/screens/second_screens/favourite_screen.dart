@@ -18,7 +18,7 @@ class FavouritePage extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 16),
                 child: SizedBox(
-                  height: 567,
+                  height: 615,
                   child: ListView(
                     children: [
                       const SearchBox(),

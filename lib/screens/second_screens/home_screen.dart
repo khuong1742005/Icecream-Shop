@@ -80,7 +80,7 @@ class _HomePageState extends State<HomePage> {
             ),
             const SizedBox(height: 17),
             SizedBox(
-              height: 400,
+              height: 420,
               child: GridView.builder(
                 scrollDirection: Axis.horizontal,
                 itemCount: 10,
