@@ -3,6 +3,7 @@ import 'package:ice_cream_shop/screens/first_screens/forgot_pass_screen.dart';
 import 'package:ice_cream_shop/screens/first_screens/sign_up_screen.dart';
 import 'package:ice_cream_shop/screens/second_screens/favourite_screen.dart';
 import 'package:ice_cream_shop/screens/second_screens/home_screen.dart';
+import 'package:ice_cream_shop/screens/second_screens/shop_screen.dart';
 
 class MainHomePage extends StatefulWidget {
   const MainHomePage({super.key});
@@ -85,7 +86,7 @@ class _MainHomePageState extends State<MainHomePage> {
     return [
       const HomePage(),
       const FavouritePage(),
-      const SignUpPage(),
+      const ShopScreen(),
       const ForgotPassPage(),
     ];
   }
