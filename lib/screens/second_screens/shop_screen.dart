@@ -9,7 +9,7 @@ class ShopScreen extends StatefulWidget {
 }
 
 class _ShopScreenState extends State<ShopScreen> {
-  int _selectedTabIndex = 1;
+  int _selectedTabIndex = 0;
 
   @override
   Widget build(BuildContext context) {
